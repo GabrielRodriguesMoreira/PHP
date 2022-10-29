@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('test');
-});
 
-Route::get('/home', function () {
+Route::get("/User/{user}/{user2?}", [UserController::class, "show"])->name('user');
+Route::get("/Post", [PostController::class, "show"])->name('post');
+
+Route::get('/', function () {   
     return view('welcome');
 });
