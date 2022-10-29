@@ -16,7 +16,7 @@ use \App\Http\Controllers\PostController;
 
 
 Route::get("/User/{user}/{user2?}", [UserController::class, "show"])->name('user');
-Route::get("/Post", [PostController::class, "show"])->name('post');
+Route::get("/", [PostController::class, "show"])->name('post');
 
 Route::get('/', function () {   
     return view('welcome');
