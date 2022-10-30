@@ -1,5 +1,4 @@
-{{$id}}
-{{$id2}}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href= {{asset('css/app.css')}}>
 </head>
 <body>
-    User
+    <h1>User {{$id}}</h1>
+    <h1>{{$id2}}</h1>
+    <h1>data: {{ date("d/m/y") }}</h1>
 </body>
 </html>
